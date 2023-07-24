@@ -19,3 +19,27 @@ function getComputerChoice() {
       return getPlayerChoice();
     }
   }
+
+  function playRound(playerSelection, computerSelection) {
+    playerSelection = getPlayerChoice();
+    computerSelection = getComputerChoice();
+    
+    if (playerSelection === computerSelection) {
+      return "It is a draw! Try again.";
+      playRound(playerSelection, computerSelection);
+    } else if (
+      (playerSelection === "rock" && computerSelection === "scissors") ||
+      (playerSelection === "scissors" && computerSelection === "paper") ||
+      (playerSelection === "paper" && computerSelection === "rock")
+    ) {
+      ++playerScore;
+      return `VICTORY, ${playerSelection} won against ${computerSelection}!`;
+    } else if (
+      (playerSelection === "scissors" && computerSelection === "rock") ||
+      (playerSelection === "paper" && computerSelection === "scissors") ||
+      (playerSelection === "rock" && computerSelection === "paper")
+    ) {
+      ++computerScore;
+      return `DEFEATED, ${playerSelection} lost to ${computerSelection}!`;
+    }
+  }
