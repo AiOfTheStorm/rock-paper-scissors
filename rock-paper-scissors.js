@@ -53,3 +53,15 @@ function getComputerChoice() {
       getFinalScore();
       return "Thanks for playing the game!";
     }
+
+    function getFinalScore () {
+        if (playerScore > computerScore) {
+          console.log(`%cYou WON against the computer. CONGRATULATIONS!\nFINAL RESULTS: ${playerScore} vs ${computerScore}`, `color: green`);
+        } else if (playerScore < computerScore) {
+          console.log(`%cOh no! You LOST. Want to try your luck again?\nFINAL RESULTS: ${playerScore} vs ${computerScore}`, `color: red`);
+        } else if (playerScore === computerScore) {
+          console.log(`%cTOUGH GAME! It's a draw.\nFINAL RESULTS: ${playerScore} vs ${computerScore}`, `color: yellow`);
+        }
+      }
+      
+      game();
