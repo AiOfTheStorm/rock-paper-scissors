@@ -7,28 +7,6 @@
   <title>Rock Papers Scissors</title>
 </head>
 <body>
-  <script>
-    function getComputerChoice() {
-      return choices[Math.floor(Math.random() * choices.length)];
-    }
-
-    const choices = ["rock", "paper", "scissors"];
-
-    function getPlayerChoice () {
-      let playerInput = prompt("We are playing Rock, Paper, Scissors. Please enter your choice:");
- 
-      if (playerInput.toLowerCase() === "rock" || playerInput.toLowerCase() === "paper" || playerInput.toLowerCase() === "scissors") {
-        return playerInput.toLowerCase();
-      } else {
-        alert("Your input is not included in the choices. Try again.");
-        return getPlayerChoice();
-      }
-    }
-
-    
-
-
-
-  </script>
+  <script src = "rock-paper-scissors.js"></script>
 </body>
 </html>
