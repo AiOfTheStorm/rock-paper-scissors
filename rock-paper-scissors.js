@@ -43,3 +43,13 @@ function getComputerChoice() {
       return `DEFEATED, ${playerSelection} lost to ${computerSelection}!`;
     }
   }
+
+  function game () {
+    console.log(`ROUND 1: ${playRound(playerSelection, computerSelection)}`);
+    console.log(`ROUND 2: ${playRound(playerSelection, computerSelection)}`);
+    console.log(`ROUND 3: ${playRound(playerSelection, computerSelection)}`);
+    console.log(`ROUND 4: ${playRound(playerSelection, computerSelection)}`);
+    console.log(`ROUND 5: ${playRound(playerSelection, computerSelection)}`);
+      getFinalScore();
+      return "Thanks for playing the game!";
+    }
